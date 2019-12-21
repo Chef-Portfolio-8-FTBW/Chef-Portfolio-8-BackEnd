@@ -1,0 +1,27 @@
+## Registration and Login End Points
+- /api/auth/register
+- /api/auth/login
+
+
+## User End Points no login required
+Filer By Title
+- /api/recipes
+- /api/recipes/:id
+
+Filter By Chef
+- /api/profile
+- /api/profile/:id
+
+Filter By Meal Type
+- /api/meals
+- /api/meals/:id
+
+Filter By Ingredients
+- /api/ingredients
+- /api/ingredients:id
+
+## Chef Dashboard login required
+- /api/chef/:id/post
+- /api/chef/:id/edit/:id
+- /api/chef/:id/delete/:id
+- /api/chef/:id/recipes
