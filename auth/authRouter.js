@@ -3,7 +3,7 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken"); // installed this
 
-//const Users = require("../users/users-model.js");
+const Users = require("./auth-model");
 
 // for endpoints beginning with /api/auth
 router.post("/register", (req, res) => {
@@ -33,7 +33,7 @@ router.post("/login", (req, res) => {
         // send the token
         res.status(200).json({
           token, // added token as part of the response sent
-          message: `Welcome ${user.username}!`,
+          message: `Welcome Chef ${user.username}!`,
         });
       } else {
         res.status(401).json({ message: "Invalid Credentials" });

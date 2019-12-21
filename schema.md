@@ -4,6 +4,7 @@ chefs
 id
 username
 password
+profile_id
 
 profiles
 id
