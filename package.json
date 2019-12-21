@@ -1,0 +1,19 @@
+{
+  "name": "Chef_Portfolio_8",
+  "version": "1.0.0",
+  "description": "Food blogging API for professional chefs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chef-Portfolio-8-FTBW/Chef-Portfolio-8-BackEnd.git"
+  },
+  "author": "David Isakson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chef-Portfolio-8-FTBW/Chef-Portfolio-8-BackEnd/issues"
+  },
+  "homepage": "https://github.com/Chef-Portfolio-8-FTBW/Chef-Portfolio-8-BackEnd#readme"
+}
