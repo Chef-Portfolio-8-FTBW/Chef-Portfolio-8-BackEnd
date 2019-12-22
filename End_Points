@@ -1,5 +1,5 @@
 ## Registration and Login End Points
-- /api/auth/register ==> requires username, password, chef_name, location, contact_info
+- /api/auth/register ==> requires username, password
 - /api/auth/login ==> requires username and password
 
 
@@ -22,6 +22,7 @@ Filter By Ingredients
 
 ## Chef Dashboard login required
 - /api/chef/:id/recipe ==> get list of posted recipes
+- /api/chef/:id/profile ==> post chef profile
 - /api/chef/:id/post/recipe ==> post a new recipe
 - /api/chef/:id/edit/recipe/:id ==> edit a recipe
 - /api/chef/:id/edit/profile/:id ==> edit/customize personal profile

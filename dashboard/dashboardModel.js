@@ -1,6 +1,6 @@
 const db = require('../database/dbConfig');
 
-const tblUsers = 'chefs';//define the users table name
+const tbl = 'profiles';//define table name
 
 module.exports = {
   add,
@@ -10,21 +10,21 @@ module.exports = {
 };
 
 function find() {
-  return db(tblUsers).select('id', 'username');
+  return db(tbl).select('id', 'chef_name');
 }
 
 function findBy(filter) {
-  return db(tblUsers).where(filter);
+  return db(tbl).where(filter);
 }
 
-async function add(user) {
-  const [id] = await db(tblUsers).insert(user);
+async function add(profile) {
+  const [id] = await db(tbl).insert(profile);
 
   return findById(id);
 }
 
 function findById(id) {
-  return db(tblUsers)
+  return db(tbl)
     .where({ id })
     .first();
 }
