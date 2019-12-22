@@ -9,7 +9,7 @@ profile_id
 profiles
 id
 chef_id
-name
+chef_name
 location
 contact_info
 

@@ -1,24 +1,24 @@
 ## Registration and Login End Points
-- /api/auth/register
-- /api/auth/login
+- /api/auth/register ==> requires username, password, chef_name, location, contact_info
+- /api/auth/login ==> requires username and password
 
 
 ## User End Points no login required
 Filer By Title
-- /api/recipes
-- /api/recipes/:id
+- /api/recipes ==> get a list of recipes
+- /api/recipes/:id ==> get a specific recipe
 
 Filter By Chef
-- /api/profile
-- /api/profile/:id
+- /api/profile ==> get a list of Chefs
+- /api/profile/:id ==> get a specific Chef
 
 Filter By Meal Type
-- /api/meals
-- /api/meals/:id
+- /api/meals ==> get a list of recipes by meal type
+- /api/meals/:id ==> possibly able to remove
 
 Filter By Ingredients
-- /api/ingredients
-- /api/ingredients:id
+- /api/ingredients ==> get a list of recipes by ingredients
+- /api/ingredients:id ==> possibly able to remove
 
 ## Chef Dashboard login required
 - /api/chef/:id/recipe ==> get list of posted recipes
