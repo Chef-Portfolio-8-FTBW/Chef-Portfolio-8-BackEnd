@@ -22,8 +22,8 @@ Filter By Ingredients
 
 ## Chef Dashboard login required
 - /api/chef/:id/recipe ==> get list of posted recipes
-- /api/chef/:id/profile ==> post chef profile
+- /api/chef/profile ==> post chef profile
 - /api/chef/:id/post/recipe ==> post a new recipe
 - /api/chef/:id/edit/recipe/:id ==> edit a recipe
-- /api/chef/:id/edit/profile/:id ==> edit/customize personal profile
+- /api/chef/edit/profile/:id ==> edit/customize personal profile
 - /api/chef/:id/delete/recipe/:id ==> delete a recipe

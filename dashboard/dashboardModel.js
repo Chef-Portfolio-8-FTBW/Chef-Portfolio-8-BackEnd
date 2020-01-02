@@ -7,6 +7,7 @@ module.exports = {
   find,
   findBy,
   findById,
+  editProfile
 };
 
 function find() {
@@ -27,4 +28,10 @@ function findById(id) {
   return db(tbl)
     .where({ id })
     .first();
+}
+
+function editProfile(changes, id){
+  return db(tbl)
+  .update(changes)
+  .where({ id });
 }

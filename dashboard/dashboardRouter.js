@@ -16,4 +16,26 @@ router.post("/profile", restricted, (req, res) => {
     });
 });
 
+router.put('/edit/profile/:id', restricted, (req, res) =>{
+  const { id } = req.params;
+  const changes = req.body;
+
+  Chef.findById(id)
+    .then(chef =>{
+      if(chef){
+        Chef.editProfile(changes)
+          .then(prof =>{
+            res.status(200).json(prof);
+      })
+      }else{
+        res.status.(404).json({msg: 'Profile not found'});
+      }
+    })
+    .catch(err=>{
+      res.status(500).json(err);
+    });
+});
+
+
+
 module.exports = router;
