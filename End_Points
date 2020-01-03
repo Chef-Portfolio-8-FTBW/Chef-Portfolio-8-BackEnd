@@ -9,8 +9,8 @@ Filer By Title
 - /api/recipes/:id ==> get a specific recipe
 
 Filter By Chef
-- /api/profile ==> get a list of Chefs
-- /api/profile/:id ==> get a specific Chef
+- /api/users/chef ==> get a list of Chefs
+- /api/users/chef/:chef_name ==> get a specific Chef
 
 Filter By Meal Type
 - /api/meals ==> get a list of recipes by meal type

@@ -2,6 +2,8 @@ const db = require('../database/dbConfig');
 
 const tbl = 'profiles';//define table name
 
+const tblRecipe = '';
+
 module.exports = {
   add,
   find,

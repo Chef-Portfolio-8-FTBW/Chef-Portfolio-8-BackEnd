@@ -4,9 +4,10 @@ const helmet = require("helmet");
 const cors = require("cors");
 const morgan = require(`morgan`);
 
-const authenticate = require('../auth/authenticate-middleware.js');
+//const authenticate = require('../auth/authenticate-middleware.js');
 const authRouter = require("../auth/authRouter.js");
 const dashboardRouter = require('../dashboard/dashboardRouter');
+const userRouter = require('../users/userRouter');
 
 const server = express();
 
@@ -17,6 +18,7 @@ server.use(cors());
 
 server.use("/api/auth", authRouter);
 server.use('/api/chef',  dashboardRouter);
+server.use('/api/users', userRouter);
 
 server.get("/", (req, res) => {
   res.status(200).json({ api: "up", dbenv: process.env.DB_ENV });
