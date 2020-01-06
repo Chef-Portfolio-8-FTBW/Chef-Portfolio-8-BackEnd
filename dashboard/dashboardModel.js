@@ -1,19 +1,24 @@
-const db = require('../database/dbConfig');
+const db = require("../database/dbConfig");
 
-const tbl = 'profiles';//define table name
+const tbl = "profiles"; //define table name
 
-const tblRecipe = '';
+const tblRecipe = "recipes";
 
 module.exports = {
   add,
   find,
   findBy,
   findById,
-  editProfile
+  editProfile,
+  newRecipe,
+  findByAuthor,
+  editRecipe,
+  findRecipeId,
+  remove
 };
 
 function find() {
-  return db(tbl).select('id', 'chef_name');
+  return db(tbl).select("id", "chef_name");
 }
 
 function findBy(filter) {
@@ -32,8 +37,34 @@ function findById(id) {
     .first();
 }
 
-function editProfile(changes, id){
+function editProfile(changes, id) {
   return db(tbl)
-  .update(changes)
-  .where({ id });
+    .update(changes)
+    .where({ id });
+}
+
+async function newRecipe(recipe) {
+  const [id] = await db(tblRecipe).insert(recipe);
+
+  return findRecipeId(id);
+}
+
+function findRecipeId(id) {
+  return db(tblRecipe)
+    .where({ id })
+    .first();
+}
+
+function findByAuthor(filter) {
+  return db(tblRecipe).where(filter);
+}
+
+function editRecipe(changes, id) {
+  return db(tblRecipe)
+    .update(changes)
+    .where({ id });
+}
+
+function remove(id){
+  return db(tblRecipe).select("id").where("id", id).del()
 }

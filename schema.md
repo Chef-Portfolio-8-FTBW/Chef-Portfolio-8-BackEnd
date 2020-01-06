@@ -15,9 +15,10 @@ contact_info
 
 recipes
 id
-chef_id
+author
 title
 image
 meal_type
 ingredients
 instructions
+

@@ -5,25 +5,24 @@
 
 ## User End Points no login required
 Filer By Title
-- /api/recipes ==> get a list of recipes
-- /api/recipes/:id ==> get a specific recipe
+- /api/users/list ==> get a list of recipes
+- /api/users/recipes/:title ==> get a specific recipe
 
 Filter By Chef
 - /api/users/chef ==> get a list of Chefs
-- /api/users/chef/:chef_name ==> get a specific Chef
+- /api/users/chef/:chef_name ==> get a specific Chef profile
+- /api/users/byChef/:author ==> get recipes by a specific Chef
 
 Filter By Meal Type
-- /api/meals ==> get a list of recipes by meal type
-- /api/meals/:id ==> possibly able to remove
+- /api/users/meals/:meal_type ==> get recipe by meal type
 
 Filter By Ingredients
-- /api/ingredients ==> get a list of recipes by ingredients
-- /api/ingredients:id ==> possibly able to remove
+- /api/users/:ingredients==> possibly able to remove
 
 ## Chef Dashboard login required
-- /api/chef/:id/recipe ==> get list of posted recipes
+- /api/chef/:author/recipe ==> get list of posted recipes
 - /api/chef/profile ==> post chef profile
-- /api/chef/:id/post/recipe ==> post a new recipe
-- /api/chef/:id/edit/recipe/:id ==> edit a recipe
+- /api/chef/recipe ==> post a new recipe
+- /api/chef/edit/recipe/:id ==> edit a recipe
 - /api/chef/edit/profile/:id ==> edit/customize personal profile
-- /api/chef/:id/delete/recipe/:id ==> delete a recipe
+- /api/chef/delete/recipe/:id ==> delete a recipe
